@@ -50,12 +50,30 @@ vm.removeAction = function(itemId){
 
 
 //Below is the http.put to modify the list item entry
+//I have not tested it..  earlier the http.put was stopping the server because "headers have already been set"
 
-vm.changeAction = function(itemId){
-  console.log('you chose to modify');
-  $http.get('/items/')
-}
 
+
+// vm.changeAction = function(itemId){
+//   console.log('you chose to modify');
+// var newData = {};
+//   var newDataName = elem.find("item.name");
+//   newDataName.bind("click", function(){
+//     console.log('clicked');
+//   })
+//
+//     var newDataQty = elem.find("item.qty")
+//       newDataQty.bind("click", function(){
+//         console.log('clicked');
+//       })
+//
+//   $http.put('/items/changeWithId/', newData).then(function(response){
+//     vm.item = response.data;
+//   }, function(response){
+//     console.log('failure modifying');
+//   })
+//
+// }
 
 
 

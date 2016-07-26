@@ -69,22 +69,22 @@ router.put('/changeWithId/:id', function(request, response){
 
 Item.findById(id, function(err, item){
   if(err){
-    console.log('error finding by id for deletion', err);
+    console.log('error finding by id for updating', err);
     response.sendStatus(500);
   }else {
-    item.remove(function(err){
+    item.update(function(err){
       if(err){
-        console.log('error actually deleting', err);
+        console.log('error actually updating', err);
         response.sendStatus(500);
       }
     })
 
-    console.log('you have successfully deleted item:', id);
+    console.log('you have successfully updated item:', id);
     response.sendStatus(200);
   }
 })
 
-});
+}); //end  router.put for upating the list 
 
 
 

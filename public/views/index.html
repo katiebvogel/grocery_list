@@ -13,14 +13,27 @@
 
     <button ng-click="thing.saveAction()">Save Item</button></br>
 
-      <ul>
+      <!-- <ul>
         <li ng-repeat = "item in thing.items">
           {{item.name}}  {{item.qty}}
           <button ng-click= "thing.removeAction(item._id)" ng-model = "item">Delete</button>
             <button ng-click="thing.changeAction(item._id)" ng-model= "item">Modify</button>
 
         </li>
+      </ul> -->
+
+<!-- trying to use editable text in my html with angular
+       -->
+      <ul>
+        <li ng-repeat = "item in thing.items">
+          <p contenteditable >{{item.name}} </p>
+          <p contenteditable>{{item.qty}} </p>
+          <button ng-click= "thing.removeAction(item._id)" ng-model = "item">Delete</button>
+            <button ng-click="thing.changeAction(item._id)" ng-model= "item">Modify -- Don't CLICK!!!!  </button>
+<!-- the modify button doesn't work -->
+        </li>
       </ul>
+
 
   </body>
 </html>
